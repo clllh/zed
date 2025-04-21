@@ -19,7 +19,7 @@ pip install -e ".[notebooks]"
 cd checkpoints
 ./download_ckpts.sh
 cd ..
-
+```
 
 
 ## 🛠️ 安装环境二zed
@@ -28,5 +28,10 @@ cd ..
 conda create -n zed python=3.9 -y
 conda activate zed
 pip install ultralytics opencv-python numpy
+```
+## 🛠️ 配置zed+python
+在新版本的zed SDK中缺少pyzed的安装，在安装好zed SDK后运行C:\Program Files (x86)\ZED SDK中的get_python_api.py
+即可配置完pyzed
+
 
 
