@@ -8,10 +8,25 @@
 - 模块化结构，易于扩展
 - 支持 ZED SDK 5.0
 
-## 🛠️ 安装
+## 🛠️ 安装环境一sam2
 
 ```bash
-git clone https://github.com/your_username/zed-yolo8-sam2-tracking.git
-cd zed-yolo8-sam2-tracking
-pip install -r requirements.txt
+conda create -n sam2 python=3.10.15
+git clone https://github.com/zdata-inc/sam2_realtime.git
+cd sam2_realtime
+pip install -e .
+pip install -e ".[notebooks]"
+cd checkpoints
+./download_ckpts.sh
+cd ..
+
+
+
+## 🛠️ 安装环境二zed
+
+```bash
+conda create -n zed python=3.9 -y
+conda activate zed
+pip install ultralytics opencv-python numpy
+
 
